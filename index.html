@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FinPro</title>
+         <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    </head>
+    <body>
+
+         <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            
+           <a class="navbar-brand mr-auto" href="#"><img src="img/FinPro.png" height="40" width="71"></a>
+                             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Price</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                </ul> 
+                 <div class="navbar-text mr-3">
+                    <a data-toggle="modal" data-target="#loginModal">
+                    <span class="fa fa-sign-in"></span> Login</a>
+                    </div>
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#signupModal">
+                    <span class="fa fa-sign-up"></span> Sign Up</a>
+                </span>
+                </div>           
+        </div>
+    </nav>
+        
+    <div id="loginModal" tabindex="-1" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email" required>
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password" required>
+                             </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1"><a href="dashboard.html">Sign in</a></button>        
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="signupModal" tabindex="-1" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Sign Up </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form onsubmit="return handleSumbit(event)">
+                    <div class="form-group row">
+                        <label for="inputName" class="col-md-2 col-form-label">Full Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="inputName" name="name" placeholder="Full Name" onchange="return handleInputChange" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="emailid" class="col-md-2 col-form-label">Email</label>
+                        <div class="col-md-10">
+                            <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputPassword6" class="col-md-2 col-form-label">Password</label>
+                        <div class="col-md-10">
+                            <input type="password" id="inputPassword6" name="password" class="form-control" aria-describedby="passwordHelpInline" required>
+                            <small id="passwordHelpInline" class="text-muted">
+                                Must be 8-20 characters long.
+                            </small>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputPassword6" class="col-md-2 col-form-label">Password Confirmation</label>
+                        <div class="col-md-10">
+                            <input type="password" id="inputPassword6" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-10">
+                            <button type="submit" class="btn btn-primary">Register </button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="container">
+             <div class="row row-content">
+                     <div class="col-12 col-sm-6 mt-5">
+                         <br>
+                    <h1>Financial Expenses Tracker</h1><br>
+                    <h3>Our expense management solution helps small and medium-sized businesses manage their expenses,
+                invoices, budgets, and card payments.</h3>
+                </div>
+                <div class="col-12 col-sm-6 align-self-end">
+                   <img src="img/undraw_calculator.svg" class="img-fluid">  
+                </div>
+            </div>
+                <div>
+                </div>
+             <div class="row row-header mb-5">
+                     <div class="col-12 col-sm-6">
+                         <br>
+                          <img src="img/project-plan.svg" class="img-fluid">
+                </div>
+                <div class="col-12 col-sm-6 mb-5 align-self-end">
+                     <h1>Manage your expenses free</h1><br>
+                     <h3>Use our handy expenses tracker to find out how much you spend, save and more.</h3>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+        <div class="container">
+            <div class="row">             
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Price</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+		              121, Clear Water Bay Road<br>
+		              Lagos, Lagos State<br>
+		              Nigeria<br>
+                      <i class="fa fa-phone fa-lg"></i>: +2347080543633<br>
+                      <i class="fa fa-envelope fa-lg"></i>: 
+                      <a href="mailto:queendalin.nduka@gmail.com">queendalin@finPro.com</a>
+		           </address>
+                </div>
+                <div class="col-7 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a href="http://google.com/+"><i class="fa fa-google"></i></a>
+                        <a href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                        <a href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                        <a href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a href="mailto:queendalin.nduka@gmail.com"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+           </div>
+           <div class="row justify-content-center">             
+                <div class="col-sm-6 col-auto">
+                    <p>© Copyright 2020 FinPro</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/script.js" ></script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+
+.jumbotron {
+  padding: 30px 10px 30px 10px;
+  margin: auto;
+  color: floralwhite;
+}
+
+.container {
+    background-color: floralwhite;
+}
+
+.card-header {
+    color: #091429 !important;
+}
+
+label, h4, h6{
+    color: #091429;
+}
+
+h5 {
+    color: grey;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 17px 0 10px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.card-body p {
+    color: #091429;
+}

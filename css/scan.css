@@ -1,0 +1,27 @@
+.row-content img {
+    height: 120px !important;
+    width: 100px !important;
+}
+
+.btn-old {
+    color: #091429 !important;
+    background-color: floralwhite !important;
+    height: 70px !important;
+    width: 80px !important;
+}
+
+.btn-new {
+            color: #091429 !important;
+            background-color: floralwhite !important;
+        }
+        .container {
+            background-color: floralwhite;
+            margin: auto;
+            width: 90%;
+        }
+        .row-content {
+            margin: 0px auto;
+            padding: 50px 0px;
+            border-bottom: 1px ridge;
+            min-height: 100px !important;
+}
