@@ -16,7 +16,7 @@ export default makeStyles((theme) => ({
       paddingBottom: '5%',
     },
   },
-  list: {
+  last: {
     [theme.breakpoints.down('sm')]: {
       marginBottom: theme.spacing(3),
       paddingBottom: '200px',
