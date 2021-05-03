@@ -1,4 +1,4 @@
-const incomeColors = ['#045de9', '#2a2a72', '#009ffd', '#36096d', '#0cbaba', '#37d5d6', '#36096d', '#1242C7', '#08277C', '#0937B5'];
+const incomeColors = ['#045de9', '#050976', '#070EEC', '#141AD1', '#0cbaba', '#060CA5', '#161BBA', '#1242C7', '#08277C', '#0937B5'];
 const expenseColors = ['#B52609', '#B22D13', '#CE2908', '#D83F20', '#E21A1A', '#EF2828', '#F70303', '#FF1212', '#A80404', '#FD3A3A', '#A61C1C'];
 
 export const incomeCategories = [
